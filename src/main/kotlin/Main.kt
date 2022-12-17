@@ -18,13 +18,18 @@ object DayFactory {
             12 -> Day12(input)
             13 -> Day13(input)
             14 -> Day14(input)
+            15 -> Day15(input)
             else -> throw Exception()
         }
     }
 }
 
 fun main(args: Array<String>) {
-    val day = 14
+    val test = Day15()
+    println("Answer one: \n${test.answerOne()}")
+    println("Answer two: \n${test.answerTwo()}")
+
+    val day = 15
     val solution = DayFactory.create(day, FileUtils.readFile(day))
     println("Answer one: \n${solution.answerOne()}")
     println("Answer two: \n${solution.answerTwo()}")
